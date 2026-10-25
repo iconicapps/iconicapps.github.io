@@ -1,336 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>TrackIt Metra - Chicago Metra Train Tracker | Iconic Apps</title>
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-  <link rel="stylesheet" href="../fontawesome-5.5/css/all.min.css" />
-  <link rel="stylesheet" href="../slick/slick.css">
-  <link rel="stylesheet" href="../slick/slick-theme.css">
-  <link rel="stylesheet" href="../magnific-popup/magnific-popup.css">
-  <link rel="stylesheet" href="../css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../css/tooplate-infinite-loop.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrackIt Metra | Iconic Apps</title>
+  <meta name="description" content="Real-time Chicago Metra train tracking, arrivals and service alerts.">
+  <link rel="canonical" href="https://iconicapps.net/trackit-metra/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Iconic Apps">
+  <meta property="og:title" content="TrackIt Metra | Iconic Apps">
+  <meta property="og:description" content="Real-time Chicago Metra train tracking, arrivals and service alerts.">
+  <meta property="og:url" content="https://iconicapps.net/trackit-metra/">
+  <meta name="theme-color" content="#5046e5">
+  <link rel="icon" href="../img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../css/site.css">
 </head>
-
 <body>
-  <!-- Hero section -->
-  <section id="hero" class="text-white tm-font-big tm-parallax">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
-      <div class="container">
-        <div class="tm-next">
-          <a href="../index.html" class="navbar-brand">Iconic Apps</a>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Iconic Apps home">
+        <span class="brand-mark" aria-hidden="true">IA</span>
+        <span>Iconic Apps</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../index.html#apps">Apps</a></li>
+        <li><a href="../index.html#process">Process</a></li>
+        <li class="nav-cta"><a href="../index.html#contact">Contact us</a></li>
+      </ul>
+    </div>
+  </header>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars navbar-toggler-icon"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="#features">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="#download">Download</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="#contact">Contact</a>
-            </li>
+  <main id="main">
+    <section class="app-hero">
+      <div class="container app-hero-grid">
+        <div class="app-hero-copy">
+          
+          <span class="eyebrow">Available now</span>
+          <h1>TrackIt Metra</h1>
+          <p class="lede">Real-time Chicago Metra train tracking. Never miss your train again with live updates and schedules.</p>
+          <div class="btn-row">
+          <a class="btn btn-dark" href="https://apps.apple.com/us/app/trackit-metra-chicago/id6746685863?platform=iphone"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.65.8-3.33.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.14.84-1.23 1.19-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.54zM14.18 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg> Download on the App Store</a>
+          </div>
+        </div>
+        <div class="app-hero-visual">
+          <img class="shot" src="../img/trackit-metra.jpg" alt="TrackIt Metra screenshot" width="280" height="571">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="about">
+      <div class="container">
+        <div class="grid grid-2" style="gap:48px">
+          <div>
+            <span class="eyebrow">About</span>
+            <h2>What is TrackIt Metra?</h2>
+          </div>
+          <div style="color:var(--muted)">
+            <p>TrackIt Metra is the ultimate companion for Chicago Metra commuters. Get real-time train tracking, live arrival times, and comprehensive schedule information for all Metra lines. Whether you're a daily commuter or an occasional rider, our app helps you plan your journey with confidence.</p>
+            <p>Stay informed about delays, track changes, and service updates to ensure you never miss your train or arrive at the station too early.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Features</span>
+          <h2>Everything you need, nothing you don't</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/><path d="M8 15h.01"/><path d="M16 15h.01"/></svg></div>
+            <h3>Real-time tracking</h3>
+            <p>Live train locations and arrival times for all Metra lines.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Live schedules</h3>
+            <p>Up-to-date schedules and service alerts.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3>Station info</h3>
+            <p>Detailed information for all Metra stations.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
+            <h3>Notifications</h3>
+            <p>Get alerts for delays and service changes.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <h3>Favorites</h3>
+            <p>Save your frequently used routes and stations.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+            <h3>Built for iPhone & iPad</h3>
+            <p>Works seamlessly on iPhone and iPad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Get TrackIt Metra</h2>
+          <p>Available now on the App Store.</p>
+          <div class="btn-row">
+            <a class="btn btn-secondary" href="https://apps.apple.com/us/app/trackit-metra-chicago/id6746685863?platform=iphone"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.65.8-3.33.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.14.84-1.23 1.19-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.54zM14.18 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg> Download on the App Store</a>
+            <a class="btn btn-ghost" href="mailto:info@iconicapps.net?subject=TrackIt%20Metra%20support">Questions? Email us</a>
+          </div>
+        </div>
+        <p style="text-align:center;margin-top:24px;color:var(--muted);font-size:0.95rem">
+          <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../index.html">
+            <span class="brand-mark" aria-hidden="true">IA</span>
+            <span>Iconic Apps</span>
+          </a>
+          <p>Custom iOS and Android apps, designed and built in Chicago.</p>
+        </div>
+        <div>
+          <h2>Our apps</h2>
+          <ul>
+          <li><a href="../quick-check-in-out/index.html">Quick Check In Out</a></li>
+          <li><a href="../trackit-metra/index.html">TrackIt Metra</a></li>
+          <li><a href="../rxdatecalc/index.html">RxDateCalc</a></li>
+          <li><a href="../hostsecret/index.html">Host Secret</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Privacy</h2>
+          <ul>
+          <li><a href="../quick-check-in-out/privacy-policy.html">Quick Check In Out privacy</a></li>
+          <li><a href="../trackit-metra/privacy-policy.html">TrackIt Metra privacy</a></li>
+          <li><a href="../rxdatecalc/privacy-policy.html">RxDateCalc privacy</a></li>
+          <li><a href="../hostsecret/privacy-policy.html">Host Secret privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:info@iconicapps.net">info@iconicapps.net</a></li>
+            <li><a href="tel:+12245299435">224-529-9435</a></li>
+            <li>Chicago, IL</li>
           </ul>
         </div>
       </div>
-    </nav>
-    <div class="text-center tm-hero-text-container">
-      <div class="tm-hero-text-container-inner">
-        <h2 class="tm-hero-title">TrackIt Metra</h2>
-        <p class="tm-hero-subtitle">
-          Real-time Chicago Metra Train Tracking
-        </p>
-        <p class="tm-hero-subtitle">
-          Never miss your train again with live updates and schedules
-        </p>
-        <div class="mt-4">
-          <a href="https://apps.apple.com/us/app/trackit-metra-chicago/id6746685863?platform=iphone" class="btn btn-primary btn-lg mr-3">
-            <i class="fab fa-apple"></i> Download on App Store
-          </a>
-        </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Iconic Apps LLC. All rights reserved.</span>
+        <span>Made in Chicago</span>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- About section -->
-  <section id="about" class="tm-section-pad-top">
-    <div class="container">
-      <div class="row tm-content-box">
-        <div class="col-lg-12 col-xl-12">
-          <div class="tm-intro-text-container">
-            <h2 class="tm-text-primary mb-4 tm-section-title">About TrackIt Metra</h2>
-            <p class="mb-4 tm-intro-text">
-              TrackIt Metra is the ultimate companion for Chicago Metra commuters. Get real-time train tracking, live arrival times, and comprehensive schedule information for all Metra lines. Whether you're a daily commuter or an occasional rider, our app helps you plan your journey with confidence.
-            </p>
-            <p class="mb-4 tm-intro-text">
-              Stay informed about delays, track changes, and service updates to ensure you never miss your train or arrive at the station too early.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features section -->
-  <section id="features" class="tm-section-pad-top tm-parallax-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 tm-content-box">
-          <h2 class="text-white text-center mb-4 tm-section-title">Key Features</h2>
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="text-center">
-                <i class="fas fa-3x fa-train text-white mb-3"></i>
-                <h4 class="text-white">Real-time Tracking</h4>
-                <p class="text-white">Live train locations and arrival times for all Metra lines</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="text-center">
-                <i class="fas fa-3x fa-clock text-white mb-3"></i>
-                <h4 class="text-white">Live Schedules</h4>
-                <p class="text-white">Up-to-date schedules and service alerts</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="text-center">
-                <i class="fas fa-3x fa-map-marker-alt text-white mb-3"></i>
-                <h4 class="text-white">Station Info</h4>
-                <p class="text-white">Detailed information for all Metra stations</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="text-center">
-                <i class="fas fa-3x fa-bell text-white mb-3"></i>
-                <h4 class="text-white">Notifications</h4>
-                <p class="text-white">Get alerts for delays and service changes</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="text-center">
-                <i class="fas fa-3x fa-star text-white mb-3"></i>
-                <h4 class="text-white">Favorites</h4>
-                <p class="text-white">Save your frequently used routes and stations</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="text-center">
-                <i class="fas fa-3x fa-mobile-alt text-white mb-3"></i>
-                <h4 class="text-white">Mobile Optimized</h4>
-                <p class="text-white">Works seamlessly on iPhone and iPad</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tm-bg-overlay"></div>
-  </section>
-
-  <!-- Download section -->
-  <section id="download" class="tm-section-pad-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="tm-text-primary tm-section-title mb-4">Download TrackIt Metra</h2>
-          <p class="mb-5">
-            Available now on the App Store for iPhone and iPad
-          </p>
-          <a href="https://apps.apple.com/us/app/trackit-metra-chicago/id6746685863?platform=iphone" class="btn btn-primary btn-lg">
-            <i class="fab fa-apple"></i> Download on App Store
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact section -->
-  <section id="contact" class="tm-section-pad-top">
-    <div class="container tm-container-contact">
-      <div class="row">
-        <div class="text-center col-12">
-          <h2 class="tm-section-title mb-4">Contact Us</h2>
-          <p class="mb-5">
-            Have questions about TrackIt Metra? We're here to help.
-          </p>
-        </div>
-
-        <div class="col-sm-12 col-md-6">
-          <form action="" method="get">
-            <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
-            <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
-            <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
-            <button type="submit" class="btn tm-btn-submit" onclick="submitForm()">Submit</button>
-          </form>
-        </div>
-
-        <div class="col-sm-12 col-md-6">
-          <div class="contact-item">
-            <a rel="nofollow" href="mailto:info@iconicapps.net" class="item-link">
-              <i class="far fa-2x fa-envelope mr-4"></i>
-              <span class="mb-0">info@iconicapps.net</span>
-            </a>
-          </div>
-
-          <div class="contact-item">
-            <a rel="nofollow" href="https://www.google.com/maps" class="item-link">
-              <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
-              <span class="mb-0">Chicago, IL</span>
-            </a>
-          </div>
-
-          <div class="contact-item">
-            <a rel="nofollow" href="tel:2245299435" class="item-link">
-              <i class="fas fa-2x fa-phone-square mr-4"></i>
-              <span class="mb-0">224-529-9435</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="text-center small tm-footer">
-      <p class="mb-0">
-        Copyright &copy; 2025 Iconic Apps. <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates">Designed by TOOPLATE</a>
-      </p>
-      <p class="mb-0 mt-2">
-        <a href="privacy-policy.html">Privacy Policy</a> | 
-        <a href="terms-and-conditions.html">Terms & Conditions</a>
-      </p>
-    </footer>
-  </section>
-
-  <script src="../js/jquery-1.9.1.min.js"></script>
-  <script src="../slick/slick.min.js"></script>
-  <script src="../magnific-popup/jquery.magnific-popup.min.js"></script>
-  <script src="../js/easing.min.js"></script>
-  <script src="../js/jquery.singlePageNav.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script>
-    function submitForm() {
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var message = document.getElementById("message").value;
-      var subject = "TrackIt Metra Inquiry from " + name;
-      var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
-      var mailto = "mailto:info@iconicapps.net?subject=" + subject + "&body=" + body;
-      window.location.href = mailto;
-    }
-
-    function getOffSet() {
-      var _offset = 450;
-      var windowHeight = window.innerHeight;
-
-      if (windowHeight > 500) {
-        _offset = 400;
-      }
-      if (windowHeight > 680) {
-        _offset = 300
-      }
-      if (windowHeight > 830) {
-        _offset = 210;
-      }
-
-      return _offset;
-    }
-
-    function setParallaxPosition($doc, multiplier, $object) {
-      var offset = getOffSet();
-      var from_top = $doc.scrollTop(),
-        bg_css = 'center ' + (multiplier * from_top - offset) + 'px';
-      $object.css({ "background-position": bg_css });
-    }
-
-    var background_image_parallax = function ($object, multiplier, forceSet) {
-      multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-      multiplier = 1 - multiplier;
-      var $doc = $(document);
-
-      if (forceSet) {
-        setParallaxPosition($doc, multiplier, $object);
-      } else {
-        $(window).scroll(function () {
-          setParallaxPosition($doc, multiplier, $object);
-        });
-      }
-    };
-
-    var background_image_parallax_2 = function ($object, multiplier) {
-      multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-      multiplier = 1 - multiplier;
-      var $doc = $(document);
-      $object.css({ "background-attachment": "fixed" });
-
-      $(window).scroll(function () {
-        if ($(window).width() > 768) {
-          var firstTop = $object.offset().top,
-            pos = $(window).scrollTop(),
-            yPos = Math.round((multiplier * (firstTop - pos)) - 186);
-
-          var bg_css = 'center ' + yPos + 'px';
-
-          $object.css({ "background-position": bg_css });
-        } else {
-          $object.css({ "background-position": "center" });
-        }
-      });
-    };
-
-    $(function () {
-      background_image_parallax($(".tm-parallax"), 0.30, false);
-      background_image_parallax_2($("#features"), 0.80);
-
-      window.addEventListener('resize', function () {
-        background_image_parallax($(".tm-parallax"), 0.30, true);
-      }, true);
-
-      $(window).scroll(function (e) {
-        if ($(document).scrollTop() > 120) {
-          $('.tm-navbar').addClass("scroll");
-        } else {
-          $('.tm-navbar').removeClass("scroll");
-        }
-      });
-
-      $('#tmNav a').on('click', function () {
-        $('.navbar-collapse').removeClass('show');
-      })
-
-      $('#tmNav').singlePageNav({
-        'easing': 'easeInOutExpo',
-        'speed': 600
-      });
-
-      $("a").on('click', function (event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 600, 'easeInOutExpo', function () {
-            window.location.hash = hash;
-          });
-        }
-      });
-    });
-  </script>
+  <script src="../js/site.js"></script>
 </body>
-
-</html> 
+</html>

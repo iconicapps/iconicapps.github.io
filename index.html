@@ -1,575 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Iconic Apps - Custom Mobile App Solutions</title>
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-  <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
-  <link rel="stylesheet" href="slick/slick.css">
-  <link rel="stylesheet" href="slick/slick-theme.css">
-  <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
-  <style>
-    /* Modern Custom Styles */
-    .hero-section {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('img/infinite-loop-01.jpg') center/cover;
-      opacity: 0.1;
-      z-index: 1;
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: white;
-      text-align: center;
-    }
-    
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .cta-button {
-      background: rgba(255, 255, 255, 0.2);
-      border: 2px solid white;
-      color: white;
-      padding: 15px 40px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      backdrop-filter: blur(10px);
-    }
-    
-    .cta-button:hover {
-      background: white;
-      color: #667eea;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .services-section {
-      padding: 100px 0;
-      background: #f8f9fa;
-    }
-    
-    .service-card {
-      background: white;
-      border-radius: 15px;
-      padding: 40px 30px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      height: 100%;
-      border: none;
-    }
-    
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    }
-    
-    .service-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 30px;
-      color: white;
-      font-size: 2rem;
-    }
-    
-    .service-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    
-    .service-description {
-      color: #666;
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
-    
-    .gallery-section {
-      padding: 100px 0;
-      background: white;
-    }
-    
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    
-    .section-subtitle {
-      font-size: 1.2rem;
-      text-align: center;
-      color: #666;
-      margin-bottom: 60px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .app-card {
-      background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    
-    .app-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    .app-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    
-    .app-info {
-      padding: 25px;
-    }
-    
-    .app-name {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: #333;
-    }
-    
-    .app-description {
-      color: #666;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    
-    .contact-section {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 100px 0;
-      color: white;
-    }
-    
-    .contact-form {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 40px;
-      backdrop-filter: blur(10px);
-    }
-    
-    .form-control {
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 10px;
-      color: white;
-      padding: 15px 20px;
-      margin-bottom: 20px;
-    }
-    
-    .form-control::placeholder {
-      color: rgba(255, 255, 255, 0.7);
-    }
-    
-    .form-control:focus {
-      background: rgba(255, 255, 255, 0.3);
-      border-color: white;
-      box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
-      color: white;
-    }
-    
-    .btn-submit {
-      background: white;
-      color: #667eea;
-      border: none;
-      padding: 15px 40px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    
-    .btn-submit:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .contact-info {
-      padding: 40px 0;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 25px;
-      color: white;
-      text-decoration: none;
-    }
-    
-    .contact-item:hover {
-      color: white;
-      text-decoration: none;
-    }
-    
-    .contact-item i {
-      width: 50px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      font-size: 1.2rem;
-    }
-    
-    .navbar-modern {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-    
-    .navbar-modern.scroll {
-      background: rgba(255, 255, 255, 0.98);
-    }
-    
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #333 !important;
-    }
-    
-    .nav-link {
-      color: #333 !important;
-      font-weight: 500;
-      margin: 0 10px;
-      transition: color 0.3s ease;
-    }
-    
-    .nav-link:hover {
-      color: #667eea !important;
-    }
-    
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      
-      .hero-subtitle {
-        font-size: 1.1rem;
-      }
-      
-      .section-title {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iconic Apps | Custom iOS &amp; Android App Development in Chicago</title>
+  <meta name="description" content="Iconic Apps designs and builds custom iOS and Android apps, from first idea to App Store launch and beyond.">
+  <link rel="canonical" href="https://iconicapps.net/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Iconic Apps">
+  <meta property="og:title" content="Iconic Apps | Custom iOS &amp; Android App Development in Chicago">
+  <meta property="og:description" content="Iconic Apps designs and builds custom iOS and Android apps, from first idea to App Store launch and beyond.">
+  <meta property="og:url" content="https://iconicapps.net/">
+  <meta name="theme-color" content="#5046e5">
+  <link rel="icon" href="img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-modern fixed-top" id="tmNav">
-    <div class="container">
-      <a class="navbar-brand" href="#home">Iconic Apps</a>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Iconic Apps home">
+        <span class="brand-mark" aria-hidden="true">IA</span>
+        <span>Iconic Apps</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#gallery">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#process">Process</a></li>
+        <li class="nav-cta"><a href="#contact">Contact us</a></li>
+      </ul>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero-section">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">Custom Mobile App Solutions</h1>
-        <p class="hero-subtitle">
-          We specialize in designing and building custom mobile applications for iOS and Android platforms. 
-          From concept to app store, we bring your ideas to life.
-        </p>
-        <a href="#contact" class="cta-button">Get Started</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services-section">
-    <div class="container">
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-subtitle">
-        We are a team of developers passionate about creating beautiful and functional apps that scale your business.
-      </p>
-      
-      <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <h3 class="service-title">Mobile Apps</h3>
-            <p class="service-description">
-              Custom iOS and Android applications designed and built to your specifications. 
-              From concept to app store publication.
-            </p>
-          </div>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <a class="pill" href="quick-check-in-out/index.html"><span class="dot">New</span> Quick Check In Out is coming soon <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <h1>Custom mobile apps, <span class="accent">built to last.</span></h1>
+        <p class="lede">Iconic Apps is a Chicago studio that designs and builds custom iOS and Android apps, from first idea to App Store launch and beyond.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#contact">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-secondary" href="#apps">See our apps</a>
         </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-robot"></i>
-            </div>
-            <h3 class="service-title">Automation</h3>
-            <p class="service-description">
-              Custom automation solutions that help your business save time and money 
-              through intelligent process optimization.
-            </p>
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-store"></i>
-            </div>
-            <h3 class="service-title">App Store Management</h3>
-            <p class="service-description">
-              Complete app store presence management including submission, updates, 
-              maintenance, and optimization.
-            </p>
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-chart-bar"></i>
-            </div>
-            <h3 class="service-title">Analytics</h3>
-            <p class="service-description">
-              Comprehensive analytics integration and custom dashboards to help you 
-              understand app performance and user behavior.
-            </p>
-          </div>
+        <div class="platforms" aria-label="Platforms we build for">
+          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.65.8-3.33.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.14.84-1.23 1.19-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.54zM14.18 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg> iPhone &amp; iPad</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14.5-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5z"/></svg> Android</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Web</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Portfolio Section -->
-  <section id="gallery" class="gallery-section">
-    <div class="container">
-      <h2 class="section-title">Our Work</h2>
-      <p class="section-subtitle">
-        Here are some of the apps we have developed and published.
-      </p>
-      
-      <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4">
-          <a href="https://apps.apple.com/us/app/trackit-metra-chicago/id6746685863?platform=iphone" class="app-card">
-            <img src="img/trackit-metra.jpg" alt="TrackIt Metra" class="app-image">
-            <div class="app-info">
-              <h4 class="app-name">TrackIt Metra</h4>
-              <p class="app-description">Track Chicago Metra trains in real-time with this intuitive mobile app.</p>
-            </div>
-          </a>
+    <section class="section section-soft" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What we do</span>
+          <h2>Everything your app needs</h2>
+          <p>We're a small team of developers who care about beautiful, reliable apps that help your business grow.</p>
         </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4">
-          <a href="https://apps.apple.com/us/app/rxdatecalc/id6738332338?platform=iphone" class="app-card">
-            <img src="img/rx-date-calc.jpg" alt="RxDateCalc" class="app-image">
-            <div class="app-info">
-              <h4 class="app-name">RxDateCalc</h4>
-              <p class="app-description">Professional prescription date calculator for healthcare professionals.</p>
-            </div>
-          </a>
+        <div class="grid grid-4">
+        <div class="card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+          <h3>Mobile apps</h3>
+          <p>Custom iOS and Android apps designed and built to your specifications, from concept to App Store launch.</p>
         </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4">
-          <a href="https://packerfitapp.web.app/" class="app-card">
-            <img src="img/packer-fit.jpg" alt="PackerFit" class="app-image">
-            <div class="app-info">
-              <h4 class="app-name">PackerFit</h4>
-              <p class="app-description">Optimize tray fitting with this innovative packing solution app.</p>
-            </div>
-          </a>
+        <div class="card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3>Automation</h3>
+          <p>Custom automation that saves your business time and money by streamlining repetitive processes.</p>
         </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4">
-          <a href="https://play.google.com/store/apps/details?id=com.raes.RAESMobile&pcampaignid=web_share" class="app-card">
-            <img src="img/raes-mobile.jpg" alt="RAES Mobile" class="app-image">
-            <div class="app-info">
-              <h4 class="app-name">RAES Mobile</h4>
-              <p class="app-description">Comprehensive roofing inspection app for field professionals.</p>
-            </div>
-          </a>
+        <div class="card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+          <h3>App Store management</h3>
+          <p>Submissions, updates, store listings and ongoing maintenance, so your app stays healthy after launch.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 16v-4"/><path d="M12 16V8"/><path d="M17 16v-7"/></svg></div>
+          <h3>Analytics</h3>
+          <p>Analytics integration and custom dashboards that show how your app performs and how people use it.</p>
+        </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2 class="section-title text-white">Get In Touch</h2>
-      <p class="section-subtitle text-white">
-        Ready to bring your app idea to life? Let's discuss your project.
-      </p>
-      
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="contact-form">
-            <form action="" method="get">
-              <div class="row">
-                <div class="col-md-6">
-                  <input id="name" name="name" type="text" placeholder="Your Name" class="form-control" required />
-                </div>
-                <div class="col-md-6">
-                  <input id="email" name="email" type="email" placeholder="Your Email" class="form-control" required />
-                </div>
+    <section class="section" id="apps">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Our work</span>
+          <h2>Apps we've built and published</h2>
+          <p>Our own apps, plus a few projects we've built for clients.</p>
+        </div>
+        <div class="grid grid-3">
+        <a class="app-card" href="quick-check-in-out/index.html">
+          <div class="app-media"><img class="app-icon-lg" src="img/quick-check-in-out-icon.png" alt="Quick Check In Out app icon" loading="lazy" width="104" height="104"></div>
+          <div class="app-body">
+            <h3>Quick Check In Out</h3>
+            <p>Signed check-in and check-out for daycares, in seconds.</p>
+            <div class="app-meta"><span class="tag tag-soon">Coming soon</span><span class="tag">iOS</span><span class="tag">Android</span><span class="tag">Childcare</span></div>
+          </div>
+        </a>
+        <a class="app-card" href="trackit-metra/index.html">
+          <div class="app-media"><img class="shot" src="img/trackit-metra.jpg" alt="TrackIt Metra screenshot" loading="lazy" width="150" height="306"></div>
+          <div class="app-body">
+            <h3>TrackIt Metra</h3>
+            <p>Real-time Chicago Metra train tracking, arrivals and service alerts.</p>
+            <div class="app-meta"><span class="tag">iOS</span><span class="tag">Transit</span></div>
+          </div>
+        </a>
+        <a class="app-card" href="rxdatecalc/index.html">
+          <div class="app-media"><img class="shot" src="img/rx-date-calc.jpg" alt="RxDateCalc screenshot" loading="lazy" width="150" height="306"></div>
+          <div class="app-body">
+            <h3>RxDateCalc</h3>
+            <p>Fast, accurate prescription date calculations for healthcare professionals.</p>
+            <div class="app-meta"><span class="tag">iOS</span><span class="tag">Healthcare</span></div>
+          </div>
+        </a>
+        <a class="app-card" href="hostsecret/index.html">
+          <div class="app-media"><span class="app-icon-tile tile-hostsecret"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg></span></div>
+          <div class="app-body">
+            <h3>Host Secret</h3>
+            <p>Generate temporary keys from a phrase, a PIN or random characters, all on your device.</p>
+            <div class="app-meta"><span class="tag">iOS</span><span class="tag">Utilities</span></div>
+          </div>
+        </a>
+        <a class="app-card" href="https://packerfitapp.web.app/" rel="noopener">
+          <div class="app-media"><img class="shot" src="img/packer-fit.jpg" alt="PackerFit screenshot" loading="lazy" width="150" height="306"></div>
+          <div class="app-body">
+            <h3>PackerFit</h3>
+            <p>Optimize tray fitting with this innovative packing solution app.</p>
+            <div class="app-meta"><span class="tag">Web</span><span class="tag">Client project</span></div>
+          </div>
+        </a>
+        <a class="app-card" href="https://play.google.com/store/apps/details?id=com.raes.RAESMobile&pcampaignid=web_share" rel="noopener">
+          <div class="app-media"><img class="shot" src="img/raes-mobile.jpg" alt="RAES Mobile screenshot" loading="lazy" width="150" height="306"></div>
+          <div class="app-body">
+            <h3>RAES Mobile</h3>
+            <p>Comprehensive roofing inspection app for field professionals.</p>
+            <div class="app-meta"><span class="tag">Android</span><span class="tag">Client project</span></div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How we work</span>
+          <h2>From idea to app store</h2>
+          <p>A simple, transparent process with no surprises.</p>
+        </div>
+        <div class="grid grid-4 steps">
+        <div class="step">
+          <h3>Discover</h3>
+          <p>We learn your goals, your users and your constraints, then agree on a clear scope.</p>
+        </div>
+        <div class="step">
+          <h3>Design</h3>
+          <p>Wireframes and polished designs you can click through before any code is written.</p>
+        </div>
+        <div class="step">
+          <h3>Build</h3>
+          <p>Native-quality iOS and Android apps, built in short iterations you can test as we go.</p>
+        </div>
+        <div class="step">
+          <h3>Launch &amp; support</h3>
+          <p>We handle App Store and Google Play submission, then keep your app updated.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Get in touch</span>
+          <h2>Let's build your app</h2>
+          <p>Tell us about your idea.</p>
+        </div>
+        <div class="contact-panel">
+          <form class="contact-form" data-contact-form data-topic="New inquiry">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
               </div>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." class="form-control" required></textarea>
-              <button type="submit" class="btn btn-submit" onclick="submitForm()">Send Message</button>
-            </form>
-          </div>
-        </div>
-        
-        <div class="col-lg-4">
-          <div class="contact-info">
-            <a href="mailto:info@iconicapps.net" class="contact-item">
-              <i class="far fa-envelope"></i>
-              <span>info@iconicapps.net</span>
-            </a>
-            
-            <a href="tel:2245299435" class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>224-529-9435</span>
-            </a>
-            
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Chicago, IL</span>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
             </div>
+            <div class="field">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" rows="6" required placeholder="What would you like to build?"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="form-note">This opens your email app with your message ready to send.</p>
+          </form>
+          <div class="contact-aside">
+            <h3>Prefer to reach out directly?</h3>
+            <p>We're happy to talk through your idea, no strings attached.</p>
+            <a class="contact-line" href="mailto:info@iconicapps.net"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span> info@iconicapps.net</a>
+            <a class="contact-line" href="tel:+12245299435"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> 224-529-9435</a>
+            <span class="contact-line"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span> Chicago, IL</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="text-center py-4" style="background: #333; color: white;">
-    <p class="mb-0">
-      Copyright &copy; 2025 Iconic Apps. All rights reserved.
-    </p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">IA</span>
+            <span>Iconic Apps</span>
+          </a>
+          <p>Custom iOS and Android apps, designed and built in Chicago.</p>
+        </div>
+        <div>
+          <h2>Our apps</h2>
+          <ul>
+          <li><a href="quick-check-in-out/index.html">Quick Check In Out</a></li>
+          <li><a href="trackit-metra/index.html">TrackIt Metra</a></li>
+          <li><a href="rxdatecalc/index.html">RxDateCalc</a></li>
+          <li><a href="hostsecret/index.html">Host Secret</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Privacy</h2>
+          <ul>
+          <li><a href="quick-check-in-out/privacy-policy.html">Quick Check In Out privacy</a></li>
+          <li><a href="trackit-metra/privacy-policy.html">TrackIt Metra privacy</a></li>
+          <li><a href="rxdatecalc/privacy-policy.html">RxDateCalc privacy</a></li>
+          <li><a href="hostsecret/privacy-policy.html">Host Secret privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:info@iconicapps.net">info@iconicapps.net</a></li>
+            <li><a href="tel:+12245299435">224-529-9435</a></li>
+            <li>Chicago, IL</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Iconic Apps LLC. All rights reserved.</span>
+        <span>Made in Chicago</span>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/jquery-1.9.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script>
-    // Submit form function to send email to info@iconicapps.net
-    function submitForm() {
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var message = document.getElementById("message").value;
-      var subject = "New Inquiry from " + name;
-      var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
-      var mailto = "mailto:info@iconicapps.net?subject=" + subject + "&body=" + body;
-      window.location.href = mailto;
-    }
-
-    $(function () {
-      // Handle window scroll and update navbar
-      $(window).scroll(function (e) {
-        if ($(document).scrollTop() > 50) {
-          $('.navbar-modern').addClass("scroll");
-        } else {
-          $('.navbar-modern').removeClass("scroll");
-        }
-      });
-
-      // Close mobile menu after click 
-      $('#tmNav a').on('click', function () {
-        $('.navbar-collapse').removeClass('show');
-      });
-
-      // Smooth scrolling for anchor links
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top - 80
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-  </script>
+  <script src="js/site.js"></script>
 </body>
-
 </html>
